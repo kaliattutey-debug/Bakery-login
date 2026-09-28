@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hearth & Crumb — Sign in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stage">
+    <div class="bg"></div>
+    <div class="scrim"></div>
+
+    <div class="brand">
+      <span class="brand-mark">Hearth &amp; Crumb</span>
+      <span class="brand-tag">Bakery Collective</span>
+      <a href="#services" class="brand-link">Our services</a>
+    </div>
+
+    <div class="panel">
+      <p class="eyebrow">Members' oven room</p>
+      <h1>Come in from the cold</h1>
+      <p class="sub">Sign in to check tomorrow's bake list.</p>
+
+      <form id="loginForm">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@bakery.com" required>
+        </div>
+        <div class="field">
+          <label for="pass">Password</label>
+          <div class="input-row">
+            <input id="pass" type="password" placeholder="••••••••" required>
+            <button type="button" class="toggle-pass" id="toggleBtn">SHOW</button>
+          </div>
+        </div>
+        <button type="submit" class="submit">Sign in</button>
+        <p class="status" id="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <section class="services" id="services">
+    <div class="services-inner">
+      <h2>What we bake for you</h2>
+      <p class="services-intro">Everything comes out of the same stone oven, from a single loaf for tonight's dinner to a full order for your café.</p>
+
+      <div class="service-list">
+        <article class="service">
+          <h3>Fresh daily loaves</h3>
+          <p>Sourdough, rye and country loaves, baked before dawn and on the shelf by seven.</p>
+        </article>
+        <article class="service">
+          <h3>Celebration cakes</h3>
+          <p>Custom cakes for birthdays and weddings. Order at least three days ahead.</p>
+        </article>
+        <article class="service">
+          <h3>Café and wholesale</h3>
+          <p>Standing weekly orders for cafés, restaurants and shops, delivered fresh.</p>
+        </article>
+        <article class="service">
+          <h3>Morning delivery</h3>
+          <p>Warm bread at your door before 8 a.m. Choose your days and skip any time.</p>
+        </article>
+        <article class="service">
+          <h3>Baking classes</h3>
+          <p>Saturday hands-on sessions where beginners shape, proof and bake their own loaf.</p>
+        </article>
+        <article class="service">
+          <h3>Event catering</h3>
+          <p>Bread boards and pastry platters for meetings, parties and family gatherings.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    &copy; The Greatest Bakery Collective
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
