@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hearth & Crumb — Home</title>
+  <script>
+    document.documentElement.classList.add('js');
+    try { if (!sessionStorage.getItem('hc_user')) location.replace('index.html'); }
+    catch (e) { location.replace('index.html'); }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a class="nav-brand" href="#top">Hearth &amp; Crumb</a>
+    <nav class="nav-links">
+      <a href="#story">The story</a>
+      <a href="#bake">Bake list</a>
+      <button type="button" class="signout" id="signout">Sign out</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <img class="hero-img" src="images/racks.jpg" alt="Tall steel racks filled with golden bread rolls in a dark bakery">
+      <div class="hero-scrim"></div>
+      <div class="hero-content">
+        <p class="eyebrow" id="greeting">Welcome back</p>
+        <h1>Before sunrise, the racks are already full.</h1>
+        <p class="lead">Follow one morning's bake, from the first shaped roll to the last warm loaf.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#story">See how it's made</a>
+          <a class="btn-ghost" href="#bake">Tomorrow's bake</a>
+        </div>
+      </div>
+      <span class="scroll-cue" aria-hidden="true"></span>
+    </section>
+
+    <!-- 01 The hand -->
+    <section class="chapter" id="story">
+      <figure class="frame reveal">
+        <img src="images/hands.jpg" alt="A baker in a white cap placing small dough rounds on a tray" loading="lazy">
+        <figcaption>Shaping the morning's first rolls</figcaption>
+      </figure>
+      <div class="copy reveal">
+        <p class="label">01 · The hand</p>
+        <h2>Every roll starts in a palm.</h2>
+        <p>Each piece of dough is weighed, shaped and set down by hand before it ever meets a machine. It is slow on purpose, and it is why no two loaves are quite alike.</p>
+      </div>
+    </section>
+
+    <!-- 02 The fire -->
+    <section class="band">
+      <img class="band-img" data-parallax src="images/oven.jpg" alt="Dough rolls resting on a tray sliding into a steel deck oven" loading="lazy">
+      <div class="band-scrim"></div>
+      <div class="band-copy reveal">
+        <p class="label">02 · The fire</p>
+        <h2>Then the oven takes over.</h2>
+        <p>Steam, heat and a few precise minutes turn soft dough into something with a crackling crust.</p>
+      </div>
+    </section>
+
+    <!-- 03 The crust -->
+    <section class="chapter flip">
+      <div class="copy reveal">
+        <p class="label">03 · The crust</p>
+        <h2>Out of the heat, onto the rack.</h2>
+        <p>Baguettes are lifted out while the crust is still singing. We let them rest just long enough to set the crumb, then send them out.</p>
+        <blockquote>Good bread should crackle when you hold it.</blockquote>
+      </div>
+      <figure class="frame reveal">
+        <img src="images/baguettes.jpg" alt="A baker lifting freshly baked baguettes from a tray on a rack" loading="lazy">
+        <figcaption>Baguettes, straight from the rack</figcaption>
+      </figure>
+    </section>
+
+    <!-- Bake list -->
+    <section class="bake" id="bake">
+      <div class="bake-inner reveal">
+        <p class="label">Members' bake list</p>
+        <h2>Tomorrow's bake</h2>
+        <p class="bake-sub">Reserve before 9 p.m. tonight and it will be waiting, warm, at the counter.</p>
+        <ul class="bake-list" id="bakeList">
+          <li data-id="sourdough"><div><h3>Country sourdough</h3><p>Out at 06:30 · 18 left</p></div><button type="button" class="reserve">Reserve</button></li>
+          <li data-id="baguette"><div><h3>Classic baguette</h3><p>Out at 07:00 · 30 left</p></div><button type="button" class="reserve">Reserve</button></li>
+          <li data-id="rolls"><div><h3>Soft bread rolls, dozen</h3><p>Out at 07:00 · 12 left</p></div><button type="button" class="reserve">Reserve</button></li>
+          <li data-id="white"><div><h3>Crusty white loaf</h3><p>Out at 07:30 · 20 left</p></div><button type="button" class="reserve">Reserve</button></li>
+        </ul>
+        <p class="bake-total" id="bakeTotal" aria-live="polite">Nothing reserved yet.</p>
+      </div>
+    </section>
+
+    <!-- Finale -->
+    <section class="chapter finale">
+      <figure class="frame tall reveal">
+        <img src="images/loaves.jpg" alt="Rustic golden loaves stacked in a shop window" loading="lazy">
+      </figure>
+      <div class="copy reveal">
+        <p class="label">The last step is yours</p>
+        <h2>Your loaves will be waiting.</h2>
+        <p>Sign in each evening, choose what you want, and collect it warm at the counter the next morning.</p>
+        <a class="btn" href="#bake">Reserve a loaf</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">&copy; The Greatest Bakery Collective</footer>
+
+  <script src="home.js"></script>
+</body>
+</html>
